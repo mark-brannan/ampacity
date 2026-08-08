@@ -1,0 +1,20 @@
+{
+  "description": "Cross-implementation test fixtures. voltage_drop cases are spot checks against the ABYC 'Conductor Sizes for 3%/10% Drop in Voltage' lookup tables; ampacity cases check E-11 Table 6A with derating. Any implementation consuming ampacity data must reproduce these outputs exactly.",
+  "voltage_drop": [
+    { "amps": 10, "length_ft": 30, "drop_pct": 3, "voltage": 12, "awg": "10" },
+    { "amps": 10, "length_ft": 40, "drop_pct": 3, "voltage": 12, "awg": "8" },
+    { "amps": 15, "length_ft": 20, "drop_pct": 3, "voltage": 12, "awg": "10" },
+    { "amps": 50, "length_ft": 40, "drop_pct": 3, "voltage": 12, "awg": "2" },
+    { "amps": 25, "length_ft": 25, "drop_pct": 10, "voltage": 12, "awg": "12" },
+    { "amps": 100, "length_ft": 60, "drop_pct": 10, "voltage": 12, "awg": "2" }
+  ],
+  "ampacity": [
+    { "awg": "12", "insulation_c": 105, "engine_space": false, "bundle": 1, "amps": 45 },
+    { "awg": "12", "insulation_c": 105, "engine_space": true, "bundle": 1, "amps": 38.3 },
+    { "awg": "4/0", "insulation_c": 105, "engine_space": false, "bundle": 1, "amps": 445 },
+    { "awg": "12", "insulation_c": 105, "engine_space": false, "bundle": 5, "amps": 27 }
+  ],
+  "not_permitted": [
+    { "insulation_c": 60, "engine_space": true }
+  ]
+}

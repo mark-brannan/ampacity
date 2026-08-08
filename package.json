@@ -1,0 +1,28 @@
+{
+  "name": "ampacity",
+  "version": "0.1.0",
+  "description": "ABYC E-11 derived wire ampacity tables, derating factors, and voltage-drop constants as language-neutral JSON, with cross-implementation test fixtures",
+  "main": "data/e11.json",
+  "files": [
+    "data",
+    "fixtures",
+    "LICENSE"
+  ],
+  "keywords": [
+    "abyc",
+    "e-11",
+    "ampacity",
+    "wire-gauge",
+    "marine",
+    "boat",
+    "rv",
+    "12v",
+    "voltage-drop"
+  ],
+  "license": "MIT",
+  "author": "Mark Brannan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mark-brannan/ampacity.git"
+  }
+}
