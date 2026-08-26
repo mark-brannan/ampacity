@@ -1,0 +1,62 @@
+name: New data
+description: Propose another E-11 table, key, or fixture
+labels: ['enhancement']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This package is data-only by design. Calculation logic belongs in a
+        consumer such as [wire-wright](https://github.com/mark-brannan/wire-wright),
+        or in a port to another language — see
+        [CONTRIBUTING.md](https://github.com/mark-brannan/ampacity/blob/main/CONTRIBUTING.md#what-does-not-belong-here).
+
+  - type: textarea
+    id: what
+    attributes:
+      label: Which table or value
+      description: Name it as E-11 names it.
+      placeholder: >
+        E-11 Table 6B — allowable amperage inside engine spaces, as published
+        rather than as a factor applied to Table 6A.
+    validations:
+      required: true
+
+  - type: textarea
+    id: use
+    attributes:
+      label: What would a consumer compute with it?
+      description: >
+        Describe it from the installation's point of view. What does someone
+        sizing a circuit decide differently once this is machine-readable?
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Where it is published
+      description: >
+        The edition, and a link if there is one. Anything ABYC does not publish
+        cannot go in — see CONTRIBUTING.md.
+    validations:
+      required: true
+
+  - type: textarea
+    id: shape
+    attributes:
+      label: Suggested shape
+      description: >
+        A sketch of the keys. Remember these names are a cross-language
+        contract — a port in another language reads them, so renaming an
+        existing key is a breaking change.
+      render: json
+    validations:
+      required: false
+
+  - type: textarea
+    id: today
+    attributes:
+      label: What do you do about it today?
+      description: A hard-coded table in your own code, a PDF on the bench, a rule of thumb.
+    validations:
+      required: false

@@ -1,0 +1,88 @@
+name: Incorrect or missing data
+description: A value here does not match ABYC E-11, or a consumer cannot use the JSON
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A wrong number here propagates into every consumer, and the consumers
+        size wire on boats — so this is the most valuable issue this repository
+        can receive. Please bring the citation.
+
+        Security problems go through a
+        [private advisory](https://github.com/mark-brannan/ampacity/security/advisories/new)
+        instead. An incorrect value is *not* one: being wrong in the open is how
+        it gets fixed fastest, so report it here.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem
+      options:
+        - A value does not match ABYC E-11
+        - A value is missing (a size, a rating, a factor)
+        - The JSON structure breaks a parser or a consumer
+        - The provenance is wrong or unverifiable
+        - Something else
+    validations:
+      required: true
+
+  - type: input
+    id: where
+    attributes:
+      label: Where in the data
+      description: The key path in `data/e11.json` or `fixtures/abyc-fixtures.json`.
+      placeholder: 'ampacity_outside_engine_spaces.105.2/0'
+    validations:
+      required: true
+
+  - type: input
+    id: current
+    attributes:
+      label: What it says now
+      placeholder: '445'
+    validations:
+      required: false
+
+  - type: input
+    id: expected
+    attributes:
+      label: What it should say
+      placeholder: '405'
+    validations:
+      required: false
+
+  - type: textarea
+    id: citation
+    attributes:
+      label: Where you read the correct value
+      description: >
+        The table, the edition or revision year, and a link if it is published.
+        `provenance` inside the JSON records where the current values came from;
+        a correction has to be at least as traceable as what it replaces. Without
+        this the issue cannot be acted on.
+      placeholder: |
+        ABYC E-11 (2018) Table 6A, 105C column, outside engine spaces.
+        Republished at https://boathowto.com/wiresize/wiresize_tables_abyc.pdf p.2
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      description: '`npm ls ampacity`, or the version field of the copy you read.'
+      placeholder: '0.1.0'
+    validations:
+      required: true
+
+  - type: input
+    id: consumer
+    attributes:
+      label: What consumes it
+      description: >
+        The library, port, or spreadsheet that reads this data, if any. Says who
+        else a correction reaches.
+      placeholder: 'wire-wright 0.0.1-alpha.0 / my own Python port / read it directly'
+    validations:
+      required: false
