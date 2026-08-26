@@ -24,5 +24,12 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mark-brannan/ampacity.git"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "homepage": "https://github.com/mark-brannan/ampacity#readme",
+  "bugs": {
+    "url": "https://github.com/mark-brannan/ampacity/issues"
   }
 }
