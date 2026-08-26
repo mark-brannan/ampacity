@@ -32,22 +32,9 @@ If you get no response at all within two weeks, open a public issue saying only
 that you are waiting on a private report — no details — and it will be picked
 up.
 
-## An incorrect value is not a vulnerability, and it matters more
-
-This package ships no code, so the classic surfaces do not exist here. What it
-ships instead is numbers that consumers size boat wiring with, and a wrong
-number could under-size a conductor.
-
-**That is a bug, and it belongs in a public issue**, not a private advisory —
-being wrong in the open is how it gets found and fixed fastest, and there is
-nothing to withhold from an attacker. See
-[CONTRIBUTING.md](CONTRIBUTING.md#the-most-valuable-contribution-is-a-correction-with-a-citation);
-bring the citation.
-
-Use the private channel only for something that behaves like a vulnerability —
-see below.
-
 ## What is in scope
+
+This package ships no code, so the surface is narrow:
 
 - **The published tarball.** Anything shipped in `files` that should not be
   there, or a discrepancy between what is on npm and what is in this
@@ -65,7 +52,9 @@ see below.
 - ABYC E-11 itself, and whether its guidance is adequate for your installation.
   This package transcribes a standard; it does not endorse it as a substitute
   for a qualified marine electrician.
-- Transcription errors, per the section above — those are public issues.
+- **Transcription errors and wrong values.** Those are ordinary bugs, however
+  high-priority: open a public issue with the citation. See
+  [CONTRIBUTING.md](CONTRIBUTING.md#the-most-valuable-contribution-is-a-correction-with-a-citation).
 
 ## Notes on how this package is built
 

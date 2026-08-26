@@ -11,8 +11,7 @@ body:
 
         Security problems go through a
         [private advisory](https://github.com/mark-brannan/ampacity/security/advisories/new)
-        instead. An incorrect value is *not* one: being wrong in the open is how
-        it gets fixed fastest, so report it here.
+        instead — please don't file them here.
 
   - type: dropdown
     id: kind

@@ -2,7 +2,7 @@ blank_issues_enabled: true
 contact_links:
   - name: Security vulnerability
     url: https://github.com/mark-brannan/ampacity/security/advisories/new
-    about: Report privately, not as a public issue. An incorrect value is not one — file that here. See SECURITY.md.
+    about: Report privately, not as a public issue. See SECURITY.md.
   - name: Sizing a circuit, rather than a problem with the data
     url: https://github.com/mark-brannan/wire-wright/issues
     about: wire-wright is the calculator that consumes this package. Questions about a result belong there.
