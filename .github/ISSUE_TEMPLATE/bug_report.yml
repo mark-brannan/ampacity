@@ -56,15 +56,17 @@ body:
     attributes:
       label: Where you read the correct value
       description: >
-        The table, the edition or revision year, and a link if it is published.
-        `provenance` inside the JSON records where the current values came from;
-        a correction has to be at least as traceable as what it replaces. Without
-        this the issue cannot be acted on.
+        **Required if you are reporting a wrong value** — the table, the edition
+        or revision year, and a link if it is published. `provenance` inside the
+        JSON records where the current values came from, so a correction has to
+        be at least as traceable as what it replaces, and one without a citation
+        cannot be acted on. Leave blank for a parser or structure problem, where
+        no ABYC citation applies.
       placeholder: |
         ABYC E-11 (2018) Table 6A, 105C column, outside engine spaces.
         Republished at https://boathowto.com/wiresize/wiresize_tables_abyc.pdf p.2
     validations:
-      required: true
+      required: false
 
   - type: input
     id: version
