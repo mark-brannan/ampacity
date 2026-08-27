@@ -23,7 +23,8 @@ also embedded in the JSON itself under `provenance`.
 ## Consumers
 
 - [wire-wright](https://www.npmjs.com/package/wire-wright) — JavaScript
-  library + CLI.
+  library + CLI, and a [browser demo](https://mark-brannan.github.io/wire-wright/)
+  that bundles these tables straight in, no re-transcription.
 
 This package is data-only so ports (Python, Kotlin, anything) can share
 one source of truth and one fixture set instead of re-transcribing tables.
