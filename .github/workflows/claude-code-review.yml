@@ -24,10 +24,5 @@ permissions:
 jobs:
   review:
     uses: mark-brannan/.github/.github/workflows/claude-review.yml@main
-    with:
-      # mergify[bot] re-runs checks at merge time; claude-code-action refuses
-      # non-human actors by default. The shared workflow's content
-      # fingerprint cache means allowing it costs nothing on a no-op sync.
-      allowed-bots: mergify[bot]
     secrets:
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
