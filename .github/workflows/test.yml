@@ -36,6 +36,11 @@ jobs:
   # No docs/budgets.json here yet, so require-config: false -- wiring the
   # check now with a real budget config is later, separate work.
   prose-budget:
+    # Matches nonempty's explicit grant below rather than relying on the
+    # workflow-level default: keeps this job's requirement declared for
+    # itself, not just inherited from whatever the top-level default is.
+    permissions:
+      contents: read
     uses: mark-brannan/.github/.github/workflows/prose-budget.yml@main
     with:
       require-config: false
