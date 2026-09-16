@@ -1,0 +1,587 @@
+{
+  "provenance": {
+    "description": "NEC (NFPA 70) derived conductor ampacity tables for 0-2000 V installations",
+    "standard": "NFPA 70 National Electrical Code",
+    "edition": "2023 (values verified identical in the 2011, 2017 and 2023 editions for every table below)",
+    "tables": [
+      "310.16",
+      "310.15(B)(1)",
+      "310.15(C)(1)",
+      "310.12"
+    ],
+    "method": "Table 310.16 was machine-extracted from the PDF text layer of two independent third-party reproductions and diffed programmatically; 0 numeric disagreements across 30 sizes x 2 metals x 3 temperature columns. Other tables were keyed from two sources each and diffed.",
+    "sources": [
+      {
+        "url": "https://www.helukabel.us/HELUKABEL/Publications/Technical-Documents/Allowable-Ampacity-Tables.pdf",
+        "what": "HELUKABEL USA, 'Allowable Ampacity Tables, NFPA 70: NEC - 2023' - manufacturer technical publication. Tables 310.16, 310.17, 310.15(B)(1)(1), 310.15(C)(1).",
+        "used_for": [
+          "310.16 copper",
+          "310.16 aluminum",
+          "310.15(B)(1)",
+          "310.15(C)(1)"
+        ]
+      },
+      {
+        "url": "https://www.omnicable.com/docs/default-source/technical-resources/nec-ampacity-data.pdf?sfvrsn=2",
+        "what": "OmniCable (distributor), 'NEC Ampacity Data', dated 05-01-2018, 2017 NEC numbering. Table 310.15(B)(16) and Table 310.15(B)(3)(a).",
+        "used_for": [
+          "310.16 copper",
+          "310.16 aluminum",
+          "310.15(C)(1)"
+        ]
+      },
+      {
+        "url": "https://necaibewelectricians.com/wp-content/uploads/2013/11/Table_310.15B16-Allowable-Ampacities-.pdf",
+        "what": "NECA-IBEW electricians' training site: page 70-154 of the 2011 NEC, Table 310.15(B)(16). Third corroborating check on 310.16; not relied on alone.",
+        "used_for": [
+          "310.16 copper",
+          "310.16 aluminum"
+        ]
+      },
+      {
+        "url": "https://www.cerrowire.com/wp-content/uploads/2021/04/Cerrowire_Ampacity_Chart_210405.pdf",
+        "what": "Cerrowire ampacity chart (2021) - manufacturer publication. Partial table (no 60C aluminum column, subset of sizes). Agrees on every value it lists.",
+        "used_for": [
+          "310.16 spot check"
+        ]
+      },
+      {
+        "url": "https://www.uglys.net/docs/default-source/uglys-documents/errata/uglysresidentialwiring2017_errata_page2.pdf",
+        "what": "Jones & Bartlett / Ugly's Residential Wiring 2017, publisher's own free errata page. Full 30C ambient correction table, 'Adapted from NEC Tables 310.15(B)(17) and 310.15(B)(2)(a)'.",
+        "used_for": [
+          "310.15(B)(1)"
+        ]
+      },
+      {
+        "url": "https://www.ncosfm.gov/electrical/31016b7-main-power-feeder-and-feeder-sizing-one-and-two-family-dwellings/open",
+        "what": "North Carolina Dept of Insurance, Office of the State Fire Marshal, Engineering Division - formal interpretation reproducing the full text of the NC amendment to NEC 310.15(B)(7) including its table. A US state agency publishing adopted electrical code text.",
+        "used_for": [
+          "310.12 / 310.15(B)(7)"
+        ]
+      },
+      {
+        "url": "https://www.prioritywire.com/techdocs/necamp.pdf",
+        "what": "Priority Wire & Cable technical data, 'As excerpted from the National Electrical Code'. NOTE: its main ampacity table is a pre-2008 edition and differs from current values; used ONLY for the dwelling service/feeder table and as a caution about edition drift.",
+        "used_for": [
+          "310.12 / 310.15(B)(7)"
+        ]
+      },
+      {
+        "url": "https://www.mikeholt.com/files/PDF/20EP_Table_310.12.pdf",
+        "what": "Mike Holt Enterprises, Electrical Exam Preparation based on the 2020 NEC, unit 9.11. Confirms 200 A -> 2/0 AWG copper under Table 310.12 (2020).",
+        "used_for": [
+          "310.12 spot check"
+        ]
+      }
+    ],
+    "edition_notes": [
+      "Table 310.16 was numbered 310.15(B)(16) in the 2011, 2014 and 2017 editions and 310.16 in 1999-2008 and again from 2020. Values below are identical across 2011, 2017 and 2023.",
+      "The 1999 edition differs materially (e.g. 14 AWG copper 60C, 1 AWG copper 90C, several aluminum cells). Do not treat pre-2008 reprints as current.",
+      "The ambient correction table is 310.15(B)(2)(a) in 2011-2017, 310.15(B)(1) in 2020, and 310.15(B)(1)(1) in 2023. Values identical.",
+      "The adjustment table is 310.15(B)(3)(a) in 2011-2017 and 310.15(C)(1) from 2020. Values identical, EXCEPT that some pre-2008 reprints show 30% rather than 35% for 41 and above.",
+      "The dwelling 83% table is 310.15(B)(7) in 2011, replaced by prose-only '83 percent' in 2017, and reinstated as Table 310.12 in 2020 and 2023.",
+      "Reported but NOT verified here: the 2026 edition is said to add 16 AWG copper and 14 AWG copper-clad aluminum rows to 310.16, and to renumber the dwelling table 310.12(A). Treat the data below as 2011-2023."
+    ],
+    "caution": "NFPA asserts copyright in the NEC. These are the numeric values only, transcribed from third-party technical reproductions and cited above; this package is not an official or complete statement of the Code. Size to the edition your jurisdiction has adopted.",
+    "transcribed": "2026-09-15"
+  },
+  "conditions": {
+    "ambient_c": 30,
+    "max_current_carrying_conductors": 3,
+    "installation": "raceway, cable, or earth (directly buried)",
+    "voltage_range": "0-2000 V"
+  },
+  "conductor_sizes": [
+    "18",
+    "16",
+    "14",
+    "12",
+    "10",
+    "8",
+    "6",
+    "4",
+    "3",
+    "2",
+    "1",
+    "1/0",
+    "2/0",
+    "3/0",
+    "4/0",
+    "250",
+    "300",
+    "350",
+    "400",
+    "500",
+    "600",
+    "700",
+    "750",
+    "800",
+    "900",
+    "1000",
+    "1250",
+    "1500",
+    "1750",
+    "2000"
+  ],
+  "ampacity_30c": {
+    "copper": {
+      "60": {
+        "1": 110,
+        "2": 95,
+        "3": 85,
+        "4": 70,
+        "6": 55,
+        "8": 40,
+        "10": 30,
+        "12": 20,
+        "14": 15,
+        "250": 215,
+        "300": 240,
+        "350": 260,
+        "400": 280,
+        "500": 320,
+        "600": 350,
+        "700": 385,
+        "750": 400,
+        "800": 410,
+        "900": 435,
+        "1000": 455,
+        "1250": 495,
+        "1500": 525,
+        "1750": 545,
+        "2000": 555,
+        "1/0": 125,
+        "2/0": 145,
+        "3/0": 165,
+        "4/0": 195
+      },
+      "75": {
+        "1": 130,
+        "2": 115,
+        "3": 100,
+        "4": 85,
+        "6": 65,
+        "8": 50,
+        "10": 35,
+        "12": 25,
+        "14": 20,
+        "250": 255,
+        "300": 285,
+        "350": 310,
+        "400": 335,
+        "500": 380,
+        "600": 420,
+        "700": 460,
+        "750": 475,
+        "800": 490,
+        "900": 520,
+        "1000": 545,
+        "1250": 590,
+        "1500": 625,
+        "1750": 650,
+        "2000": 665,
+        "1/0": 150,
+        "2/0": 175,
+        "3/0": 200,
+        "4/0": 230
+      },
+      "90": {
+        "1": 145,
+        "2": 130,
+        "3": 115,
+        "4": 95,
+        "6": 75,
+        "8": 55,
+        "10": 40,
+        "12": 30,
+        "14": 25,
+        "16": 18,
+        "18": 14,
+        "250": 290,
+        "300": 320,
+        "350": 350,
+        "400": 380,
+        "500": 430,
+        "600": 475,
+        "700": 520,
+        "750": 535,
+        "800": 555,
+        "900": 585,
+        "1000": 615,
+        "1250": 665,
+        "1500": 705,
+        "1750": 735,
+        "2000": 750,
+        "1/0": 170,
+        "2/0": 195,
+        "3/0": 225,
+        "4/0": 260
+      }
+    },
+    "aluminum": {
+      "60": {
+        "1": 85,
+        "2": 75,
+        "3": 65,
+        "4": 55,
+        "6": 40,
+        "8": 35,
+        "10": 25,
+        "12": 15,
+        "250": 170,
+        "300": 195,
+        "350": 210,
+        "400": 225,
+        "500": 260,
+        "600": 285,
+        "700": 315,
+        "750": 320,
+        "800": 330,
+        "900": 355,
+        "1000": 375,
+        "1250": 405,
+        "1500": 435,
+        "1750": 455,
+        "2000": 470,
+        "1/0": 100,
+        "2/0": 115,
+        "3/0": 130,
+        "4/0": 150
+      },
+      "75": {
+        "1": 100,
+        "2": 90,
+        "3": 75,
+        "4": 65,
+        "6": 50,
+        "8": 40,
+        "10": 30,
+        "12": 20,
+        "250": 205,
+        "300": 230,
+        "350": 250,
+        "400": 270,
+        "500": 310,
+        "600": 340,
+        "700": 375,
+        "750": 385,
+        "800": 395,
+        "900": 425,
+        "1000": 445,
+        "1250": 485,
+        "1500": 520,
+        "1750": 545,
+        "2000": 560,
+        "1/0": 120,
+        "2/0": 135,
+        "3/0": 155,
+        "4/0": 180
+      },
+      "90": {
+        "1": 115,
+        "2": 100,
+        "3": 85,
+        "4": 75,
+        "6": 55,
+        "8": 45,
+        "10": 35,
+        "12": 25,
+        "250": 230,
+        "300": 260,
+        "350": 280,
+        "400": 305,
+        "500": 350,
+        "600": 385,
+        "700": 425,
+        "750": 435,
+        "800": 445,
+        "900": 480,
+        "1000": 500,
+        "1250": 545,
+        "1500": 585,
+        "1750": 615,
+        "2000": 630,
+        "1/0": 135,
+        "2/0": 150,
+        "3/0": 175,
+        "4/0": 205
+      }
+    }
+  },
+  "ambient_correction": {
+    "basis_c": 30,
+    "table": "310.15(B)(1)",
+    "rows": [
+      {
+        "ambient_c_min": null,
+        "ambient_c_max": 10,
+        "ambient_f_min": null,
+        "ambient_f_max": 50,
+        "factors": {
+          "60": 1.29,
+          "75": 1.2,
+          "90": 1.15
+        }
+      },
+      {
+        "ambient_c_min": 11,
+        "ambient_c_max": 15,
+        "ambient_f_min": 51,
+        "ambient_f_max": 59,
+        "factors": {
+          "60": 1.22,
+          "75": 1.15,
+          "90": 1.12
+        }
+      },
+      {
+        "ambient_c_min": 16,
+        "ambient_c_max": 20,
+        "ambient_f_min": 60,
+        "ambient_f_max": 68,
+        "factors": {
+          "60": 1.15,
+          "75": 1.11,
+          "90": 1.08
+        }
+      },
+      {
+        "ambient_c_min": 21,
+        "ambient_c_max": 25,
+        "ambient_f_min": 69,
+        "ambient_f_max": 77,
+        "factors": {
+          "60": 1.08,
+          "75": 1.05,
+          "90": 1.04
+        }
+      },
+      {
+        "ambient_c_min": 26,
+        "ambient_c_max": 30,
+        "ambient_f_min": 78,
+        "ambient_f_max": 86,
+        "factors": {
+          "60": 1,
+          "75": 1,
+          "90": 1
+        }
+      },
+      {
+        "ambient_c_min": 31,
+        "ambient_c_max": 35,
+        "ambient_f_min": 87,
+        "ambient_f_max": 95,
+        "factors": {
+          "60": 0.91,
+          "75": 0.94,
+          "90": 0.96
+        }
+      },
+      {
+        "ambient_c_min": 36,
+        "ambient_c_max": 40,
+        "ambient_f_min": 96,
+        "ambient_f_max": 104,
+        "factors": {
+          "60": 0.82,
+          "75": 0.88,
+          "90": 0.91
+        }
+      },
+      {
+        "ambient_c_min": 41,
+        "ambient_c_max": 45,
+        "ambient_f_min": 105,
+        "ambient_f_max": 113,
+        "factors": {
+          "60": 0.71,
+          "75": 0.82,
+          "90": 0.87
+        }
+      },
+      {
+        "ambient_c_min": 46,
+        "ambient_c_max": 50,
+        "ambient_f_min": 114,
+        "ambient_f_max": 122,
+        "factors": {
+          "60": 0.58,
+          "75": 0.75,
+          "90": 0.82
+        }
+      },
+      {
+        "ambient_c_min": 51,
+        "ambient_c_max": 55,
+        "ambient_f_min": 123,
+        "ambient_f_max": 131,
+        "factors": {
+          "60": 0.41,
+          "75": 0.67,
+          "90": 0.76
+        }
+      },
+      {
+        "ambient_c_min": 56,
+        "ambient_c_max": 60,
+        "ambient_f_min": 132,
+        "ambient_f_max": 140,
+        "factors": {
+          "75": 0.58,
+          "90": 0.71
+        }
+      },
+      {
+        "ambient_c_min": 61,
+        "ambient_c_max": 65,
+        "ambient_f_min": 141,
+        "ambient_f_max": 149,
+        "factors": {
+          "75": 0.47,
+          "90": 0.65
+        }
+      },
+      {
+        "ambient_c_min": 66,
+        "ambient_c_max": 70,
+        "ambient_f_min": 150,
+        "ambient_f_max": 158,
+        "factors": {
+          "75": 0.33,
+          "90": 0.58
+        }
+      },
+      {
+        "ambient_c_min": 71,
+        "ambient_c_max": 75,
+        "ambient_f_min": 159,
+        "ambient_f_max": 167,
+        "factors": {
+          "90": 0.5
+        }
+      },
+      {
+        "ambient_c_min": 76,
+        "ambient_c_max": 80,
+        "ambient_f_min": 168,
+        "ambient_f_max": 176,
+        "factors": {
+          "90": 0.41
+        }
+      },
+      {
+        "ambient_c_min": 81,
+        "ambient_c_max": 85,
+        "ambient_f_min": 177,
+        "ambient_f_max": 185,
+        "factors": {
+          "90": 0.29
+        }
+      }
+    ]
+  },
+  "adjustment_factors": {
+    "table": "310.15(C)(1)",
+    "rows": [
+      {
+        "min_conductors": 4,
+        "max_conductors": 6,
+        "factor": 0.8,
+        "percent": 80
+      },
+      {
+        "min_conductors": 7,
+        "max_conductors": 9,
+        "factor": 0.7,
+        "percent": 70
+      },
+      {
+        "min_conductors": 10,
+        "max_conductors": 20,
+        "factor": 0.5,
+        "percent": 50
+      },
+      {
+        "min_conductors": 21,
+        "max_conductors": 30,
+        "factor": 0.45,
+        "percent": 45
+      },
+      {
+        "min_conductors": 31,
+        "max_conductors": 40,
+        "factor": 0.4,
+        "percent": 40
+      },
+      {
+        "min_conductors": 41,
+        "max_conductors": null,
+        "factor": 0.35,
+        "percent": 35
+      }
+    ]
+  },
+  "dwelling_83_percent": {
+    "table": "310.12 (2020/2023); 310.15(B)(7) (2011)",
+    "applies": "single-phase dwelling services and feeders, 100-400 A, supplying the entire load of a one-family dwelling or an individual dwelling unit, where no adjustment or correction factor is required",
+    "rule": "rating x 0.83, then smallest size in the 75C column of Table 310.16",
+    "rows": [
+      {
+        "amperes": 100,
+        "copper": "4",
+        "aluminum_or_copper_clad": "2"
+      },
+      {
+        "amperes": 110,
+        "copper": "3",
+        "aluminum_or_copper_clad": "1"
+      },
+      {
+        "amperes": 125,
+        "copper": "2",
+        "aluminum_or_copper_clad": "1/0"
+      },
+      {
+        "amperes": 150,
+        "copper": "1",
+        "aluminum_or_copper_clad": "2/0"
+      },
+      {
+        "amperes": 175,
+        "copper": "1/0",
+        "aluminum_or_copper_clad": "3/0"
+      },
+      {
+        "amperes": 200,
+        "copper": "2/0",
+        "aluminum_or_copper_clad": "4/0"
+      },
+      {
+        "amperes": 225,
+        "copper": "3/0",
+        "aluminum_or_copper_clad": "250"
+      },
+      {
+        "amperes": 250,
+        "copper": "4/0",
+        "aluminum_or_copper_clad": "300"
+      },
+      {
+        "amperes": 300,
+        "copper": "250",
+        "aluminum_or_copper_clad": "350"
+      },
+      {
+        "amperes": 350,
+        "copper": "350",
+        "aluminum_or_copper_clad": "500"
+      },
+      {
+        "amperes": 400,
+        "copper": "400",
+        "aluminum_or_copper_clad": "600"
+      }
+    ]
+  }
+}
