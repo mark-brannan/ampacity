@@ -1,7 +1,7 @@
 {
   "name": "ampacity",
   "version": "0.1.0",
-  "description": "Conductor ampacity tables, derating factors and voltage-drop constants from ABYC E-11 and the NEC, as language-neutral JSON with cross-implementation test fixtures",
+  "description": "Conductor ampacity tables, derating factors and voltage-drop constants from ABYC E-11, the NEC and 33 CFR 183, as language-neutral JSON with cross-implementation test fixtures",
   "main": "data/e11.json",
   "files": [
     "data",
@@ -17,6 +17,8 @@
     "e-11",
     "nec",
     "nfpa-70",
+    "uscg",
+    "33-cfr-183",
     "electrical",
     "marine",
     "boat",
