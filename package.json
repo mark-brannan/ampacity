@@ -1,7 +1,7 @@
 {
   "name": "ampacity",
   "version": "0.1.0",
-  "description": "ABYC E-11 derived wire ampacity tables, derating factors, and voltage-drop constants as language-neutral JSON, with cross-implementation test fixtures",
+  "description": "Conductor ampacity tables, derating factors and voltage-drop constants from ABYC E-11 and the NEC, as language-neutral JSON with cross-implementation test fixtures",
   "main": "data/e11.json",
   "files": [
     "data",
@@ -9,15 +9,19 @@
     "LICENSE"
   ],
   "keywords": [
-    "abyc",
-    "e-11",
     "ampacity",
     "wire-gauge",
+    "wire-sizing",
+    "voltage-drop",
+    "abyc",
+    "e-11",
+    "nec",
+    "nfpa-70",
+    "electrical",
     "marine",
     "boat",
     "rv",
-    "12v",
-    "voltage-drop"
+    "12v"
   ],
   "license": "MIT",
   "author": "Mark Brannan",
