@@ -1,0 +1,12 @@
+{
+  "description": "Cross-implementation test fixtures for data/uscg-33cfr183.json. amps = Table 5 value, times the note 1 engine-space factor when engine_space is true, times the note 2 bundling factor when the circuit is 50 V or more and three or more current-carrying conductors share a duct, bundle or cable. Any implementation consuming this data must reproduce these outputs exactly.",
+  "ampacity": [
+    { "awg": "12", "insulation_c": 105, "engine_space": false, "bundle": 1, "volts": 12, "amps": 45 },
+    { "awg": "12", "insulation_c": 105, "engine_space": true, "bundle": 1, "volts": 12, "amps": 38.25 },
+    { "awg": "12", "insulation_c": 60, "engine_space": true, "bundle": 1, "volts": 12, "amps": 14.5 },
+    { "awg": "4/0", "insulation_c": 200, "engine_space": false, "bundle": 1, "volts": 48, "amps": 510 },
+    { "awg": "12", "insulation_c": 105, "engine_space": false, "bundle": 5, "volts": 120, "amps": 27 },
+    { "awg": "12", "insulation_c": 105, "engine_space": false, "bundle": 5, "volts": 12, "amps": 45 },
+    { "awg": "6", "insulation_c": 90, "engine_space": true, "bundle": 30, "volts": 120, "amps": 32.8 }
+  ]
+}

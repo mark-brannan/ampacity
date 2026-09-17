@@ -14,11 +14,17 @@ one file per standard, each carrying its own provenance.
   columns, 18 AWG to 2000 kcmil; ambient correction factors; adjustment
   factors for more than three current-carrying conductors; the 83% dwelling
   service and feeder table.
-- `fixtures/abyc-fixtures.json`, `fixtures/nec-fixtures.json` — spot-check
-  cases per standard. An implementation in any language that consumes this
+- `data/uscg-33cfr183.json` — **33 CFR 183.425**, the US Coast Guard
+  regulation for recreational boats. Table 5 allowable amperage by
+  insulation temperature rating; engine-space correction factors; bundling
+  factors for circuits of 50 V or more. A work of the US Government, so
+  public domain. The numbers are E-11 Table 6A's, with one difference: the
+  regulation permits 60 °C conductors in engine spaces at 0.58, E-11 does not.
+- `fixtures/abyc-fixtures.json`, `fixtures/nec-fixtures.json`,
+  `fixtures/uscg-fixtures.json` — spot-check cases per standard. An implementation in any language that consumes this
   data should reproduce these outputs exactly.
 
-The two standards are not interchangeable and the package does not pretend
+The standards are not interchangeable and the package does not pretend
 they are. E-11 derates for engine spaces and bundling; the NEC derates for
 ambient and for conductor count in a raceway. Their shapes differ because the
 tables differ, and a consumer picks the one its jurisdiction adopted.
