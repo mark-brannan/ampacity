@@ -1,0 +1,70 @@
+{
+  "description": "Cross-implementation test fixtures for data/nec.json. Every case is a lookup or a derate a consumer must reproduce exactly from the tables, with no rounding of its own. Amps are the computed product; a consumer that rounds to the next standard overcurrent device is doing something these fixtures deliberately do not cover.",
+  "ampacity": [
+    { "size": "14", "material": "copper", "insulation_c": 60, "amps": 15 },
+    { "size": "12", "material": "copper", "insulation_c": 75, "amps": 25 },
+    { "size": "10", "material": "copper", "insulation_c": 90, "amps": 40 },
+    { "size": "4/0", "material": "copper", "insulation_c": 90, "amps": 260 },
+    { "size": "2000", "material": "copper", "insulation_c": 75, "amps": 665 },
+    { "size": "12", "material": "aluminum", "insulation_c": 60, "amps": 15 },
+    { "size": "500", "material": "aluminum", "insulation_c": 75, "amps": 310 },
+    { "size": "2000", "material": "aluminum", "insulation_c": 90, "amps": 630 }
+  ],
+  "not_listed": [
+    { "size": "18", "material": "copper", "insulation_c": 60, "why": "18 and 16 AWG appear only in the 90C column" },
+    { "size": "16", "material": "copper", "insulation_c": 75, "why": "18 and 16 AWG appear only in the 90C column" },
+    { "size": "18", "material": "aluminum", "insulation_c": 90, "why": "the aluminum columns start at 12 AWG" },
+    { "size": "14", "material": "aluminum", "insulation_c": 75, "why": "the aluminum columns start at 12 AWG" }
+  ],
+  "ambient_correction": [
+    { "ambient_c": 30, "insulation_c": 75, "factor": 1.0 },
+    { "ambient_c": 40, "insulation_c": 75, "factor": 0.88 },
+    { "ambient_c": 45, "insulation_c": 90, "factor": 0.87 },
+    { "ambient_c": 5, "insulation_c": 60, "factor": 1.29 },
+    { "ambient_c": 85, "insulation_c": 90, "factor": 0.29 }
+  ],
+  "ambient_not_permitted": [
+    { "ambient_c": 60, "insulation_c": 60, "why": "the 60C column ends at 55C ambient" },
+    { "ambient_c": 75, "insulation_c": 75, "why": "the 75C column ends at 70C ambient" },
+    { "ambient_c": 90, "insulation_c": 90, "why": "the 90C column ends at 85C ambient" }
+  ],
+  "adjustment": [
+    { "conductors": 3, "factor": 1.0, "why": "4 or more is where the table starts" },
+    { "conductors": 6, "factor": 0.8 },
+    { "conductors": 9, "factor": 0.7 },
+    { "conductors": 20, "factor": 0.5 },
+    { "conductors": 41, "factor": 0.35 },
+    { "conductors": 200, "factor": 0.35 }
+  ],
+  "derated": [
+    {
+      "size": "10", "material": "copper", "insulation_c": 75,
+      "ambient_c": 40, "conductors": 3,
+      "amps": 30.8,
+      "why": "35 A x 0.88 ambient"
+    },
+    {
+      "size": "12", "material": "copper", "insulation_c": 90,
+      "ambient_c": 30, "conductors": 6,
+      "amps": 24,
+      "why": "30 A x 0.8 adjustment"
+    },
+    {
+      "size": "12", "material": "copper", "insulation_c": 90,
+      "ambient_c": 45, "conductors": 6,
+      "amps": 20.88,
+      "why": "30 A x 0.87 ambient x 0.8 adjustment"
+    },
+    {
+      "size": "4/0", "material": "aluminum", "insulation_c": 90,
+      "ambient_c": 50, "conductors": 12,
+      "amps": 84.05,
+      "why": "205 A x 0.82 ambient x 0.5 adjustment"
+    }
+  ],
+  "dwelling_83_percent": [
+    { "amperes": 100, "copper": "4", "aluminum_or_copper_clad": "2" },
+    { "amperes": 200, "copper": "2/0", "aluminum_or_copper_clad": "4/0" },
+    { "amperes": 400, "copper": "400", "aluminum_or_copper_clad": "600" }
+  ]
+}
