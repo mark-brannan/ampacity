@@ -5,7 +5,10 @@ name: Release
 # request; merging THAT pull request is the release. See
 # mark-brannan/.github/.github/workflows/release-please.yml for the full
 # rationale (batching, squash-merge requirement, tag format, version
-# policy).
+# policy). The shared workflow also carries the `release-main` concurrency
+# group (cancel-in-progress: false) at job level, so two rapid pushes to
+# main queue rather than race; this caller needs no concurrency block of
+# its own.
 
 on:
   push:
