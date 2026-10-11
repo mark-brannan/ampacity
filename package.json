@@ -1,6 +1,6 @@
 {
   "name": "ampacity",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ABYC E-11 derived wire ampacity tables, derating factors, and voltage-drop constants as language-neutral JSON, with cross-implementation test fixtures",
   "main": "data/e11.json",
   "files": [
