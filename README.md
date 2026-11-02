@@ -35,8 +35,9 @@ URL. Summarised:
   state fire marshal's reproduction of an adopted amendment — cross-checked so
   that every cell agrees across at least two independent sources. Nothing was
   taken from NFPA's own free-access portal, whose terms forbid redistribution.
-  The 2011, 2017 and 2023 editions carry identical values for these tables;
-  pre-2008 reprints do not, and are still in circulation.
+  The 2011, 2017 and 2023 editions carry identical values (the table numbers
+  moved between editions, and the dwelling table was prose-only in 2017);
+  pre-2008 reprints differ, and are still in circulation.
 
 NFPA asserts copyright in the NEC and ABYC in E-11. What is published here is
 the numeric content, attributed, not the standards themselves. Size to the

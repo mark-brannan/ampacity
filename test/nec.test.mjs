@@ -124,6 +124,20 @@ test('ambient correction bands are contiguous and cover 30C at unity', () => {
       `gap or overlap between band ${i - 1} and ${i}`,
     )
   }
+  // The Fahrenheit bands are a second transcription of the same table; a
+  // keyed-in typo there would reach a consumer that looks up by degrees F.
+  for (let i = 0; i < rows.length; i++) {
+    assert.equal(
+      rows[i].ambient_f_max,
+      Math.round(rows[i].ambient_c_max * 9 / 5 + 32),
+      `band ${i}: ambient_f_max is not ${rows[i].ambient_c_max}C in Fahrenheit`,
+    )
+    if (i > 0) {
+      assert.equal(rows[i].ambient_f_min, rows[i - 1].ambient_f_max + 1, `Fahrenheit gap at band ${i}`)
+    } else {
+      assert.equal(rows[0].ambient_f_min, null)
+    }
+  }
   const at30 = rows.find(
     (r) => (r.ambient_c_min ?? -Infinity) <= 30 && 30 <= r.ambient_c_max,
   )
