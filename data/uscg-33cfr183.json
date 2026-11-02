@@ -1,0 +1,35 @@
+{
+  "provenance": {
+    "description": "United States Coast Guard boat electrical-system regulation, 33 CFR Part 183 Subpart I: allowable amperage of conductors (Table 5 to section 183.425), the engine-space correction factors (Table 5 note 1) and the bundling correction factors (Table 5 note 2, applied by section 183.435(b) to circuits of 50 volts or more). Numeric values only.",
+    "standard": "33 CFR 183.425, Table 5, as in force 2025-07-01 (unchanged since the original rule, 42 FR 5944, 31 January 1977)",
+    "copyright": "A work of the United States Government, 17 U.S.C. section 105; not subject to copyright.",
+    "sources": [
+      { "url": "https://www.ecfr.gov/current/title-33/section-183.425", "what": "eCFR, Office of the Federal Register", "edition": "current, fetched 2026-09-15" },
+      { "url": "https://www.law.cornell.edu/cfr/text/33/183.425", "what": "Cornell Legal Information Institute", "edition": "current, fetched 2026-09-15" },
+      { "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title33-vol2/xml/CFR-2025-title33-vol2-sec183-425.xml", "what": "GPO govinfo annual CFR", "edition": "revised as of 2025-07-01" },
+      { "url": "https://www.govinfo.gov/content/pkg/FR-1977-01-31/pdf/FR-1977-01-31.pdf", "what": "Federal Register final rule CGD 73-217, 42 FR 5944", "edition": "1977-01-31, pages 5944-5945" }
+    ],
+    "cross_check": "All four sources agree on every cell. The outside-engine-space table, the bundling factors and the 75 C to 200 C engine-space factors are identical to the ABYC E-11 Table 6A values in data/e11.json; the one difference is 60 C in engine spaces, which E-11 does not permit and 33 CFR 183.425 permits at 0.58.",
+    "scope": "Applies to boats under 33 CFR Part 183 (recreational boats with electrical systems, section 183.401). Bundling factors are mandatory only for conductors carrying 50 volts or more (section 183.435(b)); section 183.430 imposes no bundling derate on lower-voltage conductors.",
+    "transcribed": "2026-09-15"
+  },
+  "awg_order": ["18", "16", "14", "12", "10", "8", "6", "4", "3", "2", "1", "1/0", "2/0", "3/0", "4/0"],
+  "insulation_ratings_c": ["60", "75", "80", "90", "105", "125", "200"],
+  "ampacity_outside_engine_spaces": {
+    "60": { "18": 10, "16": 15, "14": 20, "12": 25, "10": 40, "8": 55, "6": 80, "4": 105, "3": 120, "2": 140, "1": 165, "1/0": 195, "2/0": 225, "3/0": 260, "4/0": 300 },
+    "75": { "18": 10, "16": 15, "14": 20, "12": 25, "10": 40, "8": 65, "6": 95, "4": 125, "3": 145, "2": 170, "1": 195, "1/0": 230, "2/0": 265, "3/0": 310, "4/0": 360 },
+    "80": { "18": 15, "16": 20, "14": 25, "12": 35, "10": 50, "8": 70, "6": 100, "4": 130, "3": 150, "2": 175, "1": 210, "1/0": 245, "2/0": 285, "3/0": 330, "4/0": 385 },
+    "90": { "18": 20, "16": 25, "14": 30, "12": 40, "10": 55, "8": 70, "6": 100, "4": 135, "3": 155, "2": 180, "1": 210, "1/0": 245, "2/0": 285, "3/0": 330, "4/0": 385 },
+    "105": { "18": 20, "16": 25, "14": 35, "12": 45, "10": 60, "8": 80, "6": 120, "4": 160, "3": 180, "2": 210, "1": 245, "1/0": 285, "2/0": 330, "3/0": 385, "4/0": 445 },
+    "125": { "18": 25, "16": 30, "14": 40, "12": 50, "10": 70, "8": 90, "6": 125, "4": 170, "3": 195, "2": 225, "1": 265, "1/0": 305, "2/0": 355, "3/0": 410, "4/0": 475 },
+    "200": { "18": 25, "16": 35, "14": 45, "12": 55, "10": 70, "8": 100, "6": 135, "4": 180, "3": 210, "2": 240, "1": 280, "1/0": 325, "2/0": 370, "3/0": 430, "4/0": 510 }
+  },
+  "engine_space_factor": { "60": 0.58, "75": 0.75, "80": 0.78, "90": 0.82, "105": 0.85, "125": 0.89, "200": 1.0 },
+  "bundle_factors_50v_and_above": [
+    { "max_conductors": 2, "factor": 1.0 },
+    { "max_conductors": 3, "factor": 0.7 },
+    { "max_conductors": 6, "factor": 0.6 },
+    { "max_conductors": 24, "factor": 0.5 },
+    { "max_conductors": null, "factor": 0.4 }
+  ]
+}

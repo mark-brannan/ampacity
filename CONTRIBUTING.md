@@ -4,7 +4,7 @@ Thanks for looking. This package is **reference data, not code**: conductor
 ampacity and wire-sizing tables, published as language-neutral JSON so that
 implementations in any language can share one source of truth and one fixture
 set instead of each re-transcribing the tables. One file per standard — ABYC
-E-11 and the NEC today — each carrying its own provenance.
+E-11, the NEC and 33 CFR 183 today — each carrying its own provenance.
 
 That shape decides what a useful contribution looks like here.
 

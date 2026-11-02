@@ -3,6 +3,7 @@
     "description": "ABYC E-11 derived reference data for DC circuit wire sizing on small craft",
     "ampacity_source": "ABYC E-11 Table 6A (Allowable Amperage of Single Conductors Not Bundled, Sheathed, or in Conduit), as republished with ABYC permission at https://boathowto.com/wiresize/wiresize_tables_abyc.pdf",
     "voltage_drop_method": "circular mils = K * amps * round-trip-feet / allowable-drop-volts, K = 10.75 for copper DC; verified against the ABYC 3% and 10% conductor-size lookup tables in the same document (see fixtures/)",
+    "also_in_law": "The Table 6A amperages, the 75 C to 200 C engine-space factors and the bundling factors are identical to 33 CFR 183.425 Table 5, a US Government work not subject to copyright; see data/uscg-33cfr183.json",
     "transcribed": "2026-08-08"
   },
   "circular_mils": {
