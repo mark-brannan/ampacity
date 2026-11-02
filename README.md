@@ -4,25 +4,10 @@ Conductor ampacity and wire-sizing reference data, published as
 language-neutral JSON. No code — just the tables every implementation needs,
 one file per standard, each carrying its own provenance.
 
-- `data/e11.json` — **ABYC E-11**, for DC wiring on boats and RVs. AWG
-  circular-mil areas; allowable amperage by insulation temperature rating
-  outside engine spaces (Table 6A); engine-space correction factors; DC
-  bundling derates; the copper voltage-drop constant (K = 10.75); standard
-  fuse ratings.
-- `data/nec.json` — **NEC (NFPA 70)**, for land-based US installations.
-  Table 310.16 ampacities at 30 °C for copper and aluminium across the 60/75/90 °C
-  columns, 18 AWG to 2000 kcmil; ambient correction factors; adjustment
-  factors for more than three current-carrying conductors; the 83% dwelling
-  service and feeder table.
-- `data/uscg-33cfr183.json` — **33 CFR 183.425**, the US Coast Guard
-  regulation for recreational boats. Table 5 allowable amperage by
-  insulation temperature rating; engine-space correction factors; bundling
-  factors for circuits of 50 V or more. A work of the US Government, so
-  public domain. The numbers are E-11 Table 6A's, with one difference: the
-  regulation permits 60 °C conductors in engine spaces at 0.58, E-11 does not.
-- `fixtures/abyc-fixtures.json`, `fixtures/nec-fixtures.json`,
-  `fixtures/uscg-fixtures.json` — spot-check cases per standard. An implementation in any language that consumes this
-  data should reproduce these outputs exactly.
+- `data/e11.json` — ABYC E-11 wire sizing and derating for DC wiring on boats and RVs.
+- `data/nec.json` — NEC (NFPA 70) ampacity, ambient and conductor-count derating for land installations.
+- `data/uscg-33cfr183.json` — 33 CFR 183.425 amperage and derating for US recreational boats.
+- `fixtures/` — spot-check cases per standard; an implementation should reproduce them exactly.
 
 The standards are not interchangeable and the package does not pretend
 they are. E-11 derates for engine spaces and bundling; the NEC derates for

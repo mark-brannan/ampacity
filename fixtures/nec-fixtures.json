@@ -18,6 +18,7 @@
   ],
   "ambient_correction": [
     { "ambient_c": 30, "insulation_c": 75, "factor": 1.0 },
+    { "ambient_c": 30.5, "insulation_c": 75, "factor": 0.94 },
     { "ambient_c": 40, "insulation_c": 75, "factor": 0.88 },
     { "ambient_c": 45, "insulation_c": 90, "factor": 0.87 },
     { "ambient_c": 5, "insulation_c": 60, "factor": 1.29 },

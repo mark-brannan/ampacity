@@ -89,7 +89,11 @@
     "ambient_c": 30,
     "max_current_carrying_conductors": 3,
     "installation": "raceway, cable, or earth (directly buried)",
-    "voltage_range": "0-2000 V"
+    "voltage_range": "0-2000 V",
+    "not_modelled": [
+      "These are ampacities, not overcurrent-protection limits. NEC 240.4(D) caps 14, 12 and 10 AWG copper at 15, 20 and 30 A whatever the 90C column reads; it is not applied here.",
+      "Terminal and equipment temperature limits (NEC 110.14(C)) are not applied; they usually hold a circuit to the 60C or 75C column."
+    ]
   },
   "conductor_sizes": [
     "18",
@@ -311,6 +315,7 @@
   "ambient_correction": {
     "basis_c": 30,
     "table": "310.15(B)(1)(1)",
+    "bands": "whole degrees C; round a fractional ambient up to the next whole degree, so 30.5 falls in the 31-35 band",
     "rows": [
       {
         "ambient_c_min": null,

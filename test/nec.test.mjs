@@ -202,10 +202,12 @@ test('every not_listed fixture really is absent from the table', () => {
 })
 
 test('every ambient fixture resolves to the band the table puts it in', () => {
-  const bandFor = (ambient) =>
-    data.ambient_correction.rows.find(
+  const bandFor = (fractional) => {
+    const ambient = Math.ceil(fractional)
+    return data.ambient_correction.rows.find(
       (r) => (r.ambient_c_min ?? -Infinity) <= ambient && ambient <= r.ambient_c_max,
     )
+  }
   for (const c of fixtures.ambient_correction) {
     assert.equal(
       bandFor(c.ambient_c).factors[String(c.insulation_c)],
@@ -279,4 +281,10 @@ test('the dwelling 83% table agrees between data and fixtures, and is derivable'
       `${row.amperes} A aluminum is not the smallest 75C conductor carrying ${target} A`,
     )
   }
+})
+
+test('the file says what it does not model', () => {
+  const text = data.conditions.not_modelled.join(' ')
+  assert.match(text, /240\.4\(D\)/)
+  assert.match(text, /110\.14\(C\)/)
 })
